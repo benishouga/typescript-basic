@@ -1,0 +1,45 @@
+{
+  "name": "typescript-basic",
+  "version": "1.0.0",
+  "description": "typescript, tslint, mocha, nyc and debugging on VisualStudioCode",
+  "scripts": {
+    "precompile": "npm run lint",
+    "compile": "tsc",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --bail test/**/*.spec.ts",
+    "cover": "nyc npm test",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
+    "clean": "rimraf out coverage"
+  },
+  "author": "benishouga",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.29",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2",
+    "rimraf": "^2.6.1",
+    "ts-node": "^3.0.6",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "all": true
+  }
+}
