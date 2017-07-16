@@ -10,7 +10,15 @@
         ],
         "member-ordering": [
             false
-        ]
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }
