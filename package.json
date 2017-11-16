@@ -6,7 +6,7 @@
     "precompile": "npm run lint",
     "compile": "tsc",
     "pretest": "npm run lint",
-    "test": "NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --bail test/**/*.spec.ts",
+    "test": "cross-env NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --bail test/**/*.spec.ts",
     "cover": "nyc npm test",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "clean": "rimraf out coverage"
@@ -16,11 +16,13 @@
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.29",
+    "cross-env": "^5.1.1",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
     "rimraf": "^2.6.1",
     "ts-node": "^3.0.6",
     "tslint": "^5.4.3",
+    "tslint-config-airbnb": "^5.4.2",
     "typescript": "^2.3.4"
   },
   "nyc": {

@@ -1,24 +1,44 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+        "tslint:recommended",
+        "tslint-config-airbnb"
     ],
-    "jsRules": {},
     "rules": {
-        "no-console": [
-            false
-        ],
+        "ordered-imports": false,
         "member-ordering": [
             false
         ],
+        "interface-name": [
+            false
+        ],
+        "object-literal-sort-keys": false,
         "trailing-comma": [
             true,
             {
-                "multiline": "never",
-                "singleline": "never"
+                "multiline": {
+                    "objects": "never",
+                    "arrays": "never",
+                    "functions": "never",
+                    "typeLiterals": "ignore"
+                }
             }
         ],
-        "object-literal-sort-keys": false
+        "no-increment-decrement": false,
+        "max-line-length": [
+            true,
+            160
+        ],
+        "no-console": [
+            false
+        ],
+        "align": [
+            false
+        ],
+        "max-classes-per-file": false,
+        "no-boolean-literal-compare": false,
+        "strict-boolean-expressions": false,
+        "array-type": false
     },
     "rulesDirectory": []
 }
