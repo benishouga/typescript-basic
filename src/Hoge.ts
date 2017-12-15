@@ -1,5 +1,5 @@
 export default class Hoge {
-  constructor(private name: string) { }
+  constructor(private name: string) {}
   public hello() {
     return `${this.name} say "hello"`;
   }

@@ -9,7 +9,9 @@
     "test": "cross-env NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --bail test/**/*.spec.ts",
     "cover": "nyc npm test",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
-    "clean": "rimraf out coverage"
+    "format": "prettier --parser typescript --write --single-quote  \"./src/**/*.ts\" \"./test/**/*.ts\"",
+    "clean": "rimraf out coverage",
+    "precommit": "lint-staged"
   },
   "author": "benishouga",
   "license": "MIT",
@@ -17,13 +19,26 @@
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.29",
     "cross-env": "^5.1.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
+    "prettier": "^1.9.2",
     "rimraf": "^2.6.1",
     "ts-node": "^3.0.6",
     "tslint": "^5.4.3",
     "tslint-config-airbnb": "^5.4.2",
     "typescript": "^2.3.4"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --parser typescript --write",
+      "git add"
+    ],
+    "src/**/*.tsx": [
+      "prettier --parser typescript --write",
+      "git add"
+    ]
   },
   "nyc": {
     "include": [
