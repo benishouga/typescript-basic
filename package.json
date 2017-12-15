@@ -5,9 +5,7 @@
   "scripts": {
     "precompile": "npm run lint",
     "compile": "tsc",
-    "pretest": "npm run lint",
-    "test": "cross-env NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --bail test/**/*.spec.ts",
-    "cover": "nyc npm test",
+    "test": "cross-env NODE_ENV=test jest --coverage",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "format": "prettier --parser typescript --write --single-quote  \"./src/**/*.ts\" \"./test/**/*.ts\"",
     "clean": "rimraf out coverage",
@@ -16,18 +14,21 @@
   "author": "benishouga",
   "license": "MIT",
   "devDependencies": {
-    "@types/mocha": "^2.2.41",
+    "@types/jest": "^21.1.8",
     "@types/node": "^7.0.29",
     "cross-env": "^5.1.1",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "lint-staged": "^6.0.0",
-    "mocha": "^3.4.2",
     "nyc": "^11.0.2",
     "prettier": "^1.9.2",
     "rimraf": "^2.6.1",
+    "ts-jest": "^21.2.4",
     "ts-node": "^3.0.6",
     "tslint": "^5.4.3",
     "tslint-config-airbnb": "^5.4.2",
+    "tslint-config-prettier": "^1.6.0",
+    "tslint-plugin-prettier": "^1.3.0",
     "typescript": "^2.3.4"
   },
   "lint-staged": {
@@ -40,23 +41,24 @@
       "git add"
     ]
   },
-  "nyc": {
-    "include": [
-      "src/**/*.ts"
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
     ],
-    "exclude": [
-      "**/*.d.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "all": true
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.spec.ts",
+      "!src/**/*.d.ts"
+    ]
   }
 }

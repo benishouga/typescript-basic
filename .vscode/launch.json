@@ -5,15 +5,16 @@
       "name": "test",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
-      "stopOnEntry": false,
+      "preLaunchTask": "compile",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest",
       "args": [
-        "--compilers",
-        "ts:ts-node/register,tsx:ts-node/register",
-        "--colors",
-        "${workspaceRoot}/test/**/*.spec.ts"
+        "--runInBand",
+        "--no-cache"
       ],
-      "protocol": "inspector"
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceRoot}/out/**/*"
+      ]
     }
   ]
 }

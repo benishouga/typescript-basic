@@ -8,8 +8,7 @@
         ],
         "noImplicitAny": true,
         "strictNullChecks": true,
-        "sourceMap": true,
-        "rootDir": "."
+        "inlineSourceMap": true
     },
     "include": [
         "src",

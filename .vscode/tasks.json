@@ -16,7 +16,8 @@
       "args": [
         "run",
         "compile"
-      ]
+      ],
+      "isBuildCommand": true
     },
     {
       "taskName": "_compile",
@@ -24,7 +25,8 @@
       "args": [
         "run",
         "compile"
-      ]
+      ],
+      "isBuildCommand": true
     },
     {
       "taskName": "update",
