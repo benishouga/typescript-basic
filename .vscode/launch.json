@@ -7,16 +7,9 @@
       "request": "launch",
       "preLaunchTask": "compile",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest",
-      "args": [
-        "--config",
-        "${workspaceRoot}/.vscode/jest.json",
-        "--runInBand",
-        "--no-cache"
-      ],
+      "args": ["--config", "${workspaceRoot}/.vscode/jest.json", "--runInBand", "--no-cache"],
       "sourceMaps": true,
-      "outFiles": [
-        "${workspaceRoot}/out/**/*"
-      ]
+      "outFiles": ["${workspaceRoot}/out/**/*"]
     }
   ]
 }

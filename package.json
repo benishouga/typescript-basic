@@ -32,33 +32,16 @@
     "typescript": "^2.3.4"
   },
   "lint-staged": {
-    "src/**/*.ts": [
-      "prettier --parser typescript --write",
-      "git add"
-    ],
-    "src/**/*.tsx": [
-      "prettier --parser typescript --write",
-      "git add"
-    ]
+    "src/**/*.ts": ["prettier --parser typescript --write", "git add"],
+    "src/**/*.tsx": ["prettier --parser typescript --write", "git add"]
   },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "coverageDirectory": "coverage",
-    "collectCoverageFrom": [
-      "src/**/*.ts",
-      "!src/**/*.spec.ts",
-      "!src/**/*.d.ts"
-    ]
+    "collectCoverageFrom": ["src/**/*.ts", "!src/**/*.spec.ts", "!src/**/*.d.ts"]
   }
 }

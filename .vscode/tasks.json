@@ -7,39 +7,26 @@
   "tasks": [
     {
       "taskName": "install",
-      "args": [
-        "install"
-      ]
+      "args": ["install"]
     },
     {
       "taskName": "compile",
-      "args": [
-        "run",
-        "compile"
-      ],
+      "args": ["run", "compile"],
       "isBuildCommand": true
     },
     {
       "taskName": "_compile",
       "showOutput": "never",
-      "args": [
-        "run",
-        "compile"
-      ],
+      "args": ["run", "compile"],
       "isBuildCommand": true
     },
     {
       "taskName": "update",
-      "args": [
-        "update"
-      ]
+      "args": ["update"]
     },
     {
       "taskName": "test",
-      "args": [
-        "run",
-        "test"
-      ]
+      "args": ["run", "test"]
     }
   ]
 }
