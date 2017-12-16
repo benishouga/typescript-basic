@@ -8,6 +8,8 @@
       "preLaunchTask": "compile",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest",
       "args": [
+        "--config",
+        "${workspaceRoot}/.vscode/jest.json",
         "--runInBand",
         "--no-cache"
       ],
