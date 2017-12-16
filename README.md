@@ -1,5 +1,7 @@
 # typescript-basic
-typescript, tslint, prettier, jest and debugging on VisualStudioCode
+For those who want to write typescript code anyway.
+
+Typescript, tslint, prettier, jest and debugging on VisualStudioCode.
 
 ### prepare
     npm install
@@ -8,5 +10,5 @@ typescript, tslint, prettier, jest and debugging on VisualStudioCode
     npm test
 
 ### debugging on Vsiaul Studio Code.
-
-debug configuration `test`
+Press F5 on visual studio code.
+Debug configuration `test`
