@@ -1,20 +1,30 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "outDir": "out",
-        "lib": [
-            "es6"
-        ],
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "inlineSourceMap": true
-    },
-    "include": [
-        "src",
-        "test"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "outDir": "out",
+    "lib": ["es2015"],
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "stripInternal": true,
+    "traceResolution": false,
+    "declaration": true,
+    "newLine": "LF",
+    "rootDir": ".",
+    "inlineSources": true,
+    "sourceMap": true
+  },
+  "include": ["src", "test"],
+  "exclude": ["node_modules"]
 }

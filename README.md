@@ -8,6 +8,10 @@ Typescript, tslint, prettier, jest and debugging on VisualStudioCode.
 
 ### support
     npm test
+    npm run compile
+    npm run lint
+    npm run format
+    npm run clean
 
 ### debugging on Vsiaul Studio Code.
 Press F5 on visual studio code.

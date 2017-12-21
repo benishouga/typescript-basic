@@ -1,7 +1,8 @@
 {
   "name": "typescript-basic",
   "version": "1.0.0",
-  "description": "typescript, tslint, mocha, nyc and debugging on VisualStudioCode",
+  "description": "For those who want to write typescript code anyway.",
+  "keywords": ["Typescript", "tslint", "prettier", "jest"],
   "scripts": {
     "precompile": "npm run lint",
     "compile": "tsc",
