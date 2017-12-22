@@ -3,16 +3,19 @@ For those who want to write typescript code anyway.
 
 Typescript, tslint, prettier, jest and debugging on VisualStudioCode.
 
-### prepare
+### Prepare
     npm install
 
-### support
+### Supports
     npm test
     npm run compile
     npm run lint
     npm run format
     npm run clean
 
-### debugging on Vsiaul Studio Code.
+### Debugging on Vsiaul Studio Code.
 Press F5 on visual studio code.
 Debug configuration `test`
+
+### License
+MIT
