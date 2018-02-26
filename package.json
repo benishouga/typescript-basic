@@ -42,7 +42,6 @@
     "testRegex": "(\\.|/)(test|spec)\\.tsx?$",
     "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
     "coverageDirectory": "coverage",
-    "collectCoverageFrom": ["src/**/*.ts", "!src/**/*.spec.ts", "!src/**/*.d.ts"],
-    "mapCoverage": true
+    "collectCoverageFrom": ["src/**/*.ts", "!src/**/*.spec.ts", "!src/**/*.d.ts"]
   }
 }
